@@ -1,5 +1,6 @@
 #pythex.org
 #regulare expressions =>  quantifiers
+
 """
 Basic Syntax:
 
@@ -32,6 +33,7 @@ Anchors:
 \. bah yahsebha fan
 \ escapeing  el fayda t3o bah ya3taber symbol dakhel fe regulaire expre
 """
+
 # Basic match:
 
 import re
@@ -48,12 +50,12 @@ text = "Call me at 123-456-7890 or 987-654-3210."
 phone_numbers = re.findall(r"\d{3}-\d{3}-\d{4}", text)
 print("Phone numbers found:", phone_numbers[0])
 
-#Replace text: replace fox with dog 
+#Replace text: replace fox with dog : replac  match with you want  
 text = "The quick brown fox."
 new_text = re.sub(r"fox", "dog", text)
-print(new_text)  # Output: "The quick brown dog."
+print(f" word after replacment {new_text}")  # Output: "The quick brown dog."
 
 #Split by pattern:
 text = "apple, banana,    cherry"
-fruits = re.split(r",\s*", text)
-print(fruits)  # Output: ['apple', 'banana', 'cherry']
+fruits = re.split(r",\s*", text,1) # ma3nah max split 
+print(fruits)  # Output: ['apple', 'banana', 'cherry'] return liste of elements
